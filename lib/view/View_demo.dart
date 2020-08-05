@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertest/basic/basic_demo.dart';
 import 'package:fluttertest/model/_post.dart';
 
 class ViewDemo extends StatelessWidget {
