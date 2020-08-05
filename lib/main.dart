@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertest/drawer/drawer_demo.dart';
+import 'package:fluttertest/slive/slive_demo.dart';
 import 'package:fluttertest/view/View_demo.dart';
 
 import 'basic/basic_demo.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70,
       ),
-      home: appBarTest(),
+      home: SliveViewDemo(),
     );
   }
 }
