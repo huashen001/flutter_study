@@ -1,12 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertest/drawer/drawer_demo.dart';
+import 'package:fluttertest/routes/NavigatorDemo.dart';
 import 'package:fluttertest/slive/slive_demo.dart';
 import 'package:fluttertest/view/View_demo.dart';
 
 import 'basic/basic_demo.dart';
 import 'bottom/bottomBar.dart';
 import 'layout/layout_demo.dart';
+import 'listView/ListView_demo.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +19,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: "/",
+      routes: {
+        "/about":(context)=>PageAbout(title: "about",)
+      },
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.yellow,
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70,
       ),
-      home: SliveViewDemo(),
+      home: appBarTest(),
     );
   }
 }
@@ -89,7 +95,7 @@ class appBarTest extends StatelessWidget {
             /*Tab(
               icon: Icon(Icons.directions_bike, size: 245, color: Colors.cyan),
             ),*/
-            LayoutDemo(),
+            ListViewDemo(),
             ViewDemo(),
           ],
         ),

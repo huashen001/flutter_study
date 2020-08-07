@@ -5,7 +5,7 @@ import 'package:fluttertest/model/_post.dart';
 class ViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GridViewBuilderDemo();
+    return PageViewBuliderDemo();
   }
 }
 
