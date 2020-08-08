@@ -7,6 +7,7 @@ import 'package:fluttertest/view/View_demo.dart';
 
 import 'basic/basic_demo.dart';
 import 'bottom/bottomBar.dart';
+import 'forms/forms_demo.dart';
 import 'layout/layout_demo.dart';
 import 'listView/ListView_demo.dart';
 
@@ -19,9 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/",
+      initialRoute: "/form",
       routes: {
-        "/about":(context)=>PageAbout(title: "about",)
+        "/about": (context) => PageAbout(
+              title: "about",
+            ),
+        "/form": (context) => formDemo(),
       },
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -36,8 +40,6 @@ class MyApp extends StatelessWidget {
 }
 
 class appBarTest extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
