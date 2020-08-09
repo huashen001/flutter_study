@@ -7,6 +7,7 @@ import 'package:fluttertest/view/View_demo.dart';
 
 import 'basic/basic_demo.dart';
 import 'bottom/bottomBar.dart';
+import 'button/button_demo.dart';
 import 'forms/forms_demo.dart';
 import 'layout/layout_demo.dart';
 import 'listView/ListView_demo.dart';
@@ -20,12 +21,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/form",
+      initialRoute: "/button",
       routes: {
         "/about": (context) => PageAbout(
               title: "about",
             ),
         "/form": (context) => formDemo(),
+        "/button":(context) =>ButtonDemo()
       },
       title: 'Flutter Demo',
       theme: ThemeData(
