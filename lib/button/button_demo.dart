@@ -11,8 +11,14 @@ class ButtonDemo extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          ListItem(title: "FloatActionButton",page: FloatingActionDemo(),),
-
+          ListItem(
+            title: "FloatActionButton",
+            page: FloatingActionDemo(),
+          ),
+          ListItem(
+            title: "Button",
+            page: ButtomDemo2(),
+          ),
         ],
       ),
     );
@@ -21,13 +27,18 @@ class ButtonDemo extends StatelessWidget {
 
 class FloatingActionDemo extends StatelessWidget {
   final Widget _floatingActionButton = FloatingActionButton(
-    onPressed: (){} ,
+    onPressed: () {},
     child: Icon(Icons.add),
     elevation: 0,
     backgroundColor: Colors.black87,
-
-
+    shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
   );
+  final Widget _floatingActionButtonExtend = FloatingActionButton.extended(
+      onPressed: () {},
+      label: Text("add"),
+  icon: Icon(Icons.add_circle),);
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,28 +46,45 @@ class FloatingActionDemo extends StatelessWidget {
         title: Text('FloatingActionDemo'),
         elevation: 0,
       ),
-      floatingActionButton: _floatingActionButton,
+      floatingActionButton: _floatingActionButtonExtend,
+      floatingActionButtonLocation:FloatingActionButtonLocation.centerDocked ,
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 80,
+        ),
+        shape: CircularNotchedRectangle(),
+      ),
     );
   }
 }
 
-
 class ListItem extends StatelessWidget {
   final String title;
   final Widget page;
-  ListItem({
-    this.title,
-    this.page
-});
+
+  ListItem({this.title, this.page});
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(title),
-      onTap: (){
+      onTap: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context)=>page),
+          MaterialPageRoute(builder: (context) => page),
         );
       },
+    );
+  }
+}
+
+class ButtomDemo2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ButtonDemo"),
+        elevation: 0,
+      ),
     );
   }
 }
