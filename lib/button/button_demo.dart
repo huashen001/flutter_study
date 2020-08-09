@@ -83,7 +83,7 @@ class ButtomDemo2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("ButtonDemo"),
-        elevation: 0,
+        elevation: 0.0,
       ),
     );
   }
