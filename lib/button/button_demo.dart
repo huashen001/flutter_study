@@ -20,7 +20,12 @@ class ButtonDemo extends StatelessWidget {
 }
 
 class FloatingActionDemo extends StatelessWidget {
-  final Widget _floatingActionButton = FloatingActionDemo(
+  final Widget _floatingActionButton = FloatingActionButton(
+    onPressed: (){} ,
+    child: Icon(Icons.add),
+    elevation: 0,
+    backgroundColor: Colors.black87,
+
 
   );
   @override
